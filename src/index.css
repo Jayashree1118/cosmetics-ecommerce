@@ -1,0 +1,82 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+  --bg: #ffffff;
+  --text: #222222;
+  --card-bg: #f8f9fa;
+}
+
+.dark-mode {
+  --bg: #1a1a1a;
+  --text: #f8f8f8;
+  --card-bg: #2c2c2c;
+}
+
+.App {
+  background-color: var(--bg);
+  color: var(--text);
+}
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.card {
+  background-color: var(--card-bg);
+}
+.carousel-caption {
+  transform: translateY(-50%);
+  top: 50%;
+  bottom: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 50%;
+}
+.hero-slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hero-slide:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .hero-slider {
+    flex-direction: column;
+  }
+
+  .hero-slide {
+    height: auto;
+    min-height: 250px;
+  }
+}
+.card.animate {
+  animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.1); }
+  50%  { transform: scale(0.9); }
+  75%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
